@@ -24,4 +24,14 @@ describe('SignUp UseCase', () => {
     expect(result.status).toBe(400)
     expect(result.body).toBe('Name is empty')
   })
+
+  it('should return 400 if no phonenumber is provided', async () => {
+    const { dto, sut } = makeSut()
+    dto.phonenumber = ''
+
+    const result = await sut.execute(dto)
+
+    expect(result.status).toBe(400)
+    expect(result.body).toBe('Phonenumber is empty')
+  })
 })
