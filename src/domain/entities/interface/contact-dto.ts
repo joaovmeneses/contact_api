@@ -5,7 +5,15 @@ export interface IContactCreateDTO {
 }
 
 export interface IContactDTO {
+  id: string,
   name: string,
+  lastName?: string,
+  phonenumber?: string
+}
+
+export interface IContactUpdateDTO {
+  id: string
+  name?: string,
   lastName?: string,
   phonenumber?: string
 }
