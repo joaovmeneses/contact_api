@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2019",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "src",
+    "resolveJsonModule": true
+  },
+  "include": ["src", "prisma"],
+}
