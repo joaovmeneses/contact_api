@@ -4,7 +4,12 @@ export class Contact {
   lastName: string
   phonenumber: string
 
-  constructor(name: string, lastName: string, phonenumber: string, id?: string) {
+  constructor(
+    name: string,
+    lastName: string,
+    phonenumber: string,
+    id?: string
+  ) {
     this.name = name
     this.lastName = lastName
     this.phonenumber = phonenumber
