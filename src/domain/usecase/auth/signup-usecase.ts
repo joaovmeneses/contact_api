@@ -1,9 +1,9 @@
 import { IUserDTO } from '../../../domain/entities/interface/user-dto'
 
 export class SignUpUseCase {
-  constructor(private authRepository: any) { }
+  constructor(private authRepository) { }
 
-  async execute ( user: IUserDTO ): Promise<any> {
+  async execute ( user: IUserDTO ) {
     const isVerified = await this.verifyRequiredFields(user)
     if(isVerified === true) {
       return {

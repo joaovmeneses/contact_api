@@ -1,7 +1,7 @@
 import { IUserCreateDTO } from '../../../domain/entities/interface/user-dto'
 import { SignUpUseCase } from './signup-usecase'
 
-const makeSut = (): any => {
+const makeSut = () => {
   const dto: IUserCreateDTO = {
     name: 'John',
     phonenumber: 'Smith',
