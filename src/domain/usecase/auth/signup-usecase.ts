@@ -4,7 +4,7 @@ export class SignUpUseCase {
   constructor(private authRepository: any) { }
 
   async execute ( user: IUserDTO ): Promise<any> {
-    const requiredFields = ['name', 'phonenumber']
+    const requiredFields = ['name', 'phonenumber', 'password']
     for (const element of requiredFields) {
       if (!user[element]) {
         return {
