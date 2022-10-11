@@ -44,4 +44,13 @@ describe('SignUp UseCase', () => {
     expect(result.status).toBe(400)
     expect(result.body).toBe('Password is empty')
   })
+
+  it('should return 200 if valid variables are provided', async () => {
+    const { sut, dto } = makeSut()
+    
+    const result = await sut.execute(dto)
+
+    expect(result.status).toBe(200)
+    expect(result.body).toBe('SignUp Success')
+  })
 })
